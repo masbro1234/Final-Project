@@ -2,11 +2,19 @@
  
  Chris Gravagna and Mason Brown
 
-# Project Proposal: SoccerStat — A Chill Soccer Stats Web App
+# Project Proposal: SoccerStat — A Website to get Premier League Stats
+
+### ⚠️ Note on Available Seasons
+
+This app uses the [API-Football](https://www.api-football.com/) API to fetch Premier League team and player stats. 
+Please note that:
+
+- Free-tier accounts only support the most recent seasons(2020 and earlier do not work)
+- If you see "No results found" when using an older year, it's likely due to these API access restrictions.
 
 ## 1. The Big Idea
 
-So our idea is called **SoccerStat** — it’s a simple website where you can look up soccer players or teams and get some stats, like goals, assists, match history, etc. We’re both big soccer fans and played a lot growing up, so we thought it’d be fun to build something around that. 
+So our idea is called **SoccerStat** — it’s a simple website where you can look up Premier League soccer players or teams and get some stats, like goals, assists, match history, etc. We’re both big soccer fans and played a lot growing up, so we thought it’d be fun to build something around that. We chose the Premier League because it is one of the biggest leagues in the world and our favorite to watch. 
 
 - **Minimum Viable Product (MVP):**
   - A working Flask app where you can type in a team or player and get some basic stats from either a dataset or a soccer API.

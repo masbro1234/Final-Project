@@ -1,16 +1,23 @@
 <!doctype html>
 <html>
 <head>
-    <title>SoccerStat - Search</title>
+    <title>SoccerStat - Premier League Stats</title>
 </head>
 <body>
-    <h1>Search for a Team or Player</h1>
+    <h1>Premier League Stats</h1>
     <form action="/search" method="post">
-        <input type="text" name="query" placeholder="Enter name" required>
-        <select name="search_type">
+        <label>Search for a Player or Team:</label><br>
+        <input type="text" name="query" placeholder="e.g. Arsenal or Haaland" required><br><br>
+        
+        <label>Choose Search Type:</label><br>
+        <select name="search_type" required>
             <option value="team">Team</option>
             <option value="player">Player</option>
-        </select>
+        </select><br><br>
+        
+        <label>Season Year (e.g. 2023):</label><br>
+        <input type="text" name="season" placeholder="e.g. 2023" required><br><br>
+        
         <input type="submit" value="Search">
     </form>
 </body>

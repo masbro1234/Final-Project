@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>SoccerStat - Results</title>
+</head>
+<body>
+    {% if not_found %}
+        <h2>No results found for '{{ query }}'</h2>
+    {% else %}
+        {% if search_type == 'team' %}
+            <h2>{{ name }}</h2>
+            <img src="{{ logo }}" alt="Team Logo" width="120"><br><br>
+            <p><strong>Wins:</strong> {{ wins }}</p>
+            <p><strong>Draws:</strong> {{ draws }}</p>
+            <p><strong>Losses:</strong> {{ losses }}</p>
+            <p><strong>Goals For:</strong> {{ goals_for }}</p>
+            <p><strong>Goals Against:</strong> {{ goals_against }}</p>
+        {% elif search_type == 'player' %}
+            <h2>{{ name }}</h2>
+            <img src="{{ photo }}" alt="Player Photo" width="120"><br><br>
+            <p><strong>Team:</strong> {{ team }}</p>
+            <p><strong>Goals:</strong> {{ goals }}</p>
+            <p><strong>Assists:</strong> {{ assists }}</p>
+        {% endif %}
+    {% endif %}
+    <br><a href="/">Back to search</a>
+</body>
+</html>
