@@ -7,9 +7,7 @@
 
 SoccerStat is a simple, clean web application that lets users search for Premier League teams or players and instantly view their statistics for a specific season. 
 
-As lifelong soccer fans, we wanted to create something that felt natural and useful — a site where anyone could look up a favorite player or club and quickly see performance stats in a no-frills, beginner-friendly way. Our goal was to learn the full cycle of web development: from API integration to backend logic, to user-friendly presentation.
-
-We also challenged ourselves to not just make it *functional*, but *presentable* — something someone else would actually enjoy using.
+As lifelong soccer fans, we wanted to create something that felt natural and useful — a site where anyone could look up a favorite player or club and quickly see performance stats in a no-frills, beginner-friendly way. Some people have a hard time finding exactly how a team or player did during a specific season, so we tried to be the answer to that. 
 
 ---
 
@@ -28,7 +26,7 @@ We also challenged ourselves to not just make it *functional*, but *presentable*
 ## ⚙️ How It Works (Implementation Overview)
 
 - **Framework:** Python with Flask
-- **Data Source:** API-Football ([https://api-football.com](https://api-football.com))
+- **Data Source:** API-Football ([https://api-football.com])
 - **Team Stats Shown:** Wins, Draws, Losses, Goals For, Goals Against + Team Logo
 - **Player Stats Shown:** Goals, Assists, Team Name + Player Photo
 
@@ -45,21 +43,21 @@ We also challenged ourselves to not just make it *functional*, but *presentable*
 ### 🔎 Homepage
 The user enters the player or team name, selects the type and season, then clicks search.
 
-![Home Page](Project.JPG)
+![Home Page](https://github.com/masbro1234/Final-Project/blob/main/Project.JPG?raw=true)
 
 ---
 
 ### 🏟 Team Results (Manchester City, 2023)
 Displays match record and stats, with a clean layout and team logo.
 
-![Team Result](Project2.JPG)
+![Team Result](https://github.com/masbro1234/Final-Project/blob/main/Project2.JPG?raw=true)
 
 ---
 
 ### 👤 Player Results (Erling Haaland, 2023)
 Shows goals, assists, and club info, plus an official player photo.
 
-![Player Result](Project3.JPG)
+![Player Result](https://github.com/masbro1234/Final-Project/blob/main/Project3.JPG?raw=true)
 
 ---
 
