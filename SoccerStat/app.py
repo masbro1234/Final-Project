@@ -6,7 +6,7 @@ app = Flask(__name__)
 API_KEY = 'be7d2482c42e883759f9d99f4166350d' 
 HEADERS = {'x-apisports-key': API_KEY}
 BASE_URL = 'https://v3.football.api-sports.io'
-LEAGUE_ID = 39  # Premier League
+LEAGUE_ID = 39  # This is the specific league ID for the Premier League
 
 @app.route('/')
 def home():

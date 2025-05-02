@@ -1,76 +1,89 @@
-# Team Project
- 
- Chris Gravagna and Mason Brown
-
-# Project Proposal: SoccerStat — A Website to get Premier League Stats
-
-### ⚠️ Note on Available Seasons
-
-This app uses the [API-Football](https://www.api-football.com/) API to fetch Premier League team and player stats. 
-Please note that:
-
-- Free-tier accounts only support the most recent seasons(2020 and earlier do not work)
-- If you see "No results found" when using an older year, it's likely due to these API access restrictions.
-
-## 1. The Big Idea
-
-So our idea is called **SoccerStat** — it’s a simple website where you can look up Premier League soccer players or teams and get some stats, like goals, assists, match history, etc. We’re both big soccer fans and played a lot growing up, so we thought it’d be fun to build something around that. We chose the Premier League because it is one of the biggest leagues in the world and our favorite to watch. 
-
-- **Minimum Viable Product (MVP):**
-  - A working Flask app where you can type in a team or player and get some basic stats from either a dataset or a soccer API.
-  - Clean layout using Flask templates and HTML.
-  - Display things like goals, win/loss record, and maybe recent matches.
-
-- **Stretch Goal:**
-  - Add some visualizations using `matplotlib` or `plotly`.  
-        ##ChatGPT helped us come up with this idea — we thought graphs would be a cool way to show the data##
-  - Let users compare two players or teams.
-  - Maybe add a login feature where people can save their favorite teams (if we’re feeling bold).
-
-## 2. Learning Objectives
-
-- **Shared Goals:**
-  - Get better at Python and actually build a full project with Flask.
-  - Learn how to pull data from APIs or CSVs and turn it into something useful.
-  - Practice using GitHub more.
-
-- **Individual Goals:**
-  - *Chris:* Wants to improve at frontend stuff like designing templates and making the site look clean.
-  - *Me (Mason):* Focusing on backend stuff like getting the data, doing the logic, and setting up Flask routes.
-
-We’re in a bunch of classes together and see eachother almost every day, so working on this will just be a natural part of our week.
-
-## 3. Implementation Plan
-
-We’re using **Flask** to build the app because that’s what we’ve been using in class and it’s pretty beginner-friendly. For the data, we’re gonna try APIs like [Football-Data.org](https://www.football-data.org/) or [API-Football](https://www.api-football.com/), but can also find some CSV datasets from [Kaggle](https://www.kaggle.com/) just in case.
-
-We’ll use **Pandas** to clean and process the data, and if we do graphs, we’ll try out **matplotlib** or **plotly** as we also stated above.  
-    ##We got this suggestion from ChatGPT when we asked how to show soccer stats visually##
-
-## 4. Project Schedule
-
-| Week | What We’re Doing |
-|------|-------------------|
-| Week 1 | Set up the Flask project, test out datasets or APIs |
-| Week 2 | Build the search feature and show basic stats |
-| Week 3 | Work on organizing the data and improving the display |
-| Week 4 | Try to add comparison feature + charts if we’re ready |
-| Week 5 | Final cleanup and bug fixes if needed|
-
-## 5. Collaboration Plan
-
-Since we hang out almost every day, our plan is just to meet up a few times a week and code together in person — whether it’s in class or wherever. We’ll split up the tasks a bit(Chris = frontend, Mason = backend), but we’ll help each other when needed. We’ll use GitHub to share code. 
-
-## 6. Risks and Limitations
-
-- Some of the APIs might limit how much data we can get, so we’re keeping CSV files as a backup plan.
-- Charts and comparisons could be time-consuming, so we’re okay dropping them if we run out of time.
-
-## 7. Extra Course Content That’d Be Helpful
-
-- More help on how to work with APIs and format JSON data
-- Tips for making Flask templates look nicer without overcomplicating things
+# ⚽ SoccerStat: Premier League Stats Web App  
+**By Chris Gravagna and Mason Brown**
 
 ---
 
-Overall, we’re just excited to build something around a sport that we care about and we both think it is so cool to be able to code your own website and not use a generater. 
+## 🎯 Big Idea & Project Goals
+
+SoccerStat is a simple, clean web application that lets users search for Premier League teams or players and instantly view their statistics for a specific season. 
+
+As lifelong soccer fans, we wanted to create something that felt natural and useful — a site where anyone could look up a favorite player or club and quickly see performance stats in a no-frills, beginner-friendly way. Our goal was to learn the full cycle of web development: from API integration to backend logic, to user-friendly presentation.
+
+We also challenged ourselves to not just make it *functional*, but *presentable* — something someone else would actually enjoy using.
+
+---
+
+## 👨‍💻 User Instructions
+
+1. Visit the homepage (screenshot below).
+2. Enter either a **player name** or **team name**.
+3. Choose the **search type** from the dropdown (player or team).
+4. Enter a **season year** (e.g., `2023`) — recent years work best.
+5. Click **Search** to view results!
+
+🟡 *Note:* The app uses the free tier of the API-Football service, which only supports recent seasons (usually 2022–2023). Older years may return no results.
+
+---
+
+## ⚙️ How It Works (Implementation Overview)
+
+- **Framework:** Python with Flask
+- **Data Source:** API-Football ([https://api-football.com](https://api-football.com))
+- **Team Stats Shown:** Wins, Draws, Losses, Goals For, Goals Against + Team Logo
+- **Player Stats Shown:** Goals, Assists, Team Name + Player Photo
+
+### Technical Flow:
+- The Flask backend takes in user form data (`query`, `search_type`, and `season`).
+- Based on the search type, it queries different endpoints from API-Football.
+- The JSON response is parsed and passed into a Jinja2 HTML template.
+- The results page renders stats and logos/photos dynamically based on the response.
+
+---
+
+## 🖼 Visual Results
+
+### 🔎 Homepage
+The user enters the player or team name, selects the type and season, then clicks search.
+
+![Home Page](Project.JPG)
+
+---
+
+### 🏟 Team Results (Manchester City, 2023)
+Displays match record and stats, with a clean layout and team logo.
+
+![Team Result](Project2.JPG)
+
+---
+
+### 👤 Player Results (Erling Haaland, 2023)
+Shows goals, assists, and club info, plus an official player photo.
+
+![Player Result](Project3.JPG)
+
+---
+
+## 📌 Known Limitations
+
+- ❗ **Season Access Limit:** Only recent Premier League seasons (2022, 2023) are available on the free API plan.
+- 📉 **No Stats = No Results:** If a player didn’t play that year or isn’t spelled exactly right, the API won’t return data.
+- 🌐 **Local Only:** Currently hosted at `http://127.0.0.1:5000/` — for public access, you’d need to use a tool like ngrok or Render.
+
+---
+
+## 💭 Final Reflection & Takeaways
+
+This was more than just a coding assignment — it was the first time we fully built and styled a web app from scratch. We had to debug confusing JSON objects, handle errors from missing data, and design routes that were beginner-friendly but still functional.
+
+Most importantly, we walked away with:
+
+- Confidence using Flask and APIs in real-world settings
+- A better understanding of templating logic with Jinja
+- A working, shareable project that shows our growth
+
+---
+
+## 👥 Team Credits
+
+- **Mason Brown** — Backend development, API integration, Flask logic
+- **Chris Gravagna** — Frontend templating, layout design, UI testing
