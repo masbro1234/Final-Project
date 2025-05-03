@@ -65,16 +65,16 @@ Shows goals, assists, and club info, plus an official player photo.
 
 - ❗ **Season Access Limit:** Only recent Premier League seasons (2022, 2023) are available on the free API plan.
 - 📉 **No Stats = No Results:** If a player didn’t play that year or isn’t spelled exactly right, the API won’t return data.
-- 🌐 **Local Only:** Currently hosted at `http://127.0.0.1:5000/` — for public access, you’d need to use a tool like ngrok or Render.
+- 🌐 **Local Only:** Currently hosted at `http://127.0.0.1:5000/` — for public access we ended up learning a lot about how to properly install ngrok and get a url that anyway can access publicly. The current url that now works is - https://701d-155-48-126-73.ngrok-free.app/ 
 
 ---
 
 ## 💭 Final Reflection & Takeaways
 
-This was more than just a coding assignment — it was the first time we fully built and styled a web app from scratch. We had to debug confusing JSON objects, handle errors from missing data, and design routes that were beginner-friendly but still functional.
+This was more than just a coding assignment — it was the first time we fully built and styled a simple web app from scratch. Something that was awesome to learn was how to create a public url from a local url using ngrok. Chatgpt definetely helped us form an outline on what to do and ultiamtely solve problems that we encountered. 
 
 Most importantly, we walked away with:
 
 - Confidence using Flask and APIs in real-world settings
-- A better understanding of templating logic with Jinja
+- A better understanding of what specific errors mean like when we tried to run the results a few times we got this error called "jinga" and with the help of chatgpt it allowed us to find the problem, simply i had "results.html" rather than "result.html." This is a key takeaway from this project because it goes to show how such little errors can cause so many problems.
 - A working, shareable project that shows our growth
